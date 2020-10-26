@@ -30,16 +30,24 @@ O git precisa saber quem é o usuário antes de registrar os commits.
  
  - `git show` // Ver o último ponto na história - último commit feito;
  
+ ---
+ 
 - [x] Você começa uma nova funcionalidade no seu projeto, sem estragar o que já foi feito.
 `git branch nome_da_branch`
 `git checkout nome_da_branch`   
+
+---
  
 - [x] Você adiciona as novas funcionalidades ao seu projeto, em produção
 `git checkout master`
 `git merge nome_da_branch`   
+
+---
  
 - [x] Você quer deletar a branch da nova funcionalidade, depois de aplicar em seu projeto.
 `git branch -D nome_da_branch`
+
+---
  
 - [x] Você quer colocar seu projeto na nuvem
 Ir no seu github e criar um repositório, por boas práticas coloque o nome do repositório com o mesmo nome da pasta do projeto. Mas pode-se utilizar outro nome se quiser.
@@ -59,7 +67,8 @@ para não ter que ficar sempre digitando o nome de usuário e senha toda vez que
 `git config credential.helper store`
  
 com isso não é mais preciso colocar nome de usuário e senha, pois será usado as informações de usuário e senha da última vez.
- 
+
+---
  
 - [x] Você vai pegar um projeto já iniciado, para trabalhar com o time
 `git clone https://github.com/nome_usuario/nome_projeto.git`
