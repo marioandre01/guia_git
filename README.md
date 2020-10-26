@@ -41,84 +41,72 @@ O git precisa saber quem é o usuário antes de registrar os commits.
 ---
  
 - [x] Você adiciona as novas funcionalidades ao seu projeto, em produção
-`git checkout master`
-`git merge nome_da_branch`   
+- `git checkout master`;
+- `git merge nome_da_branch`;   
 
 ---
  
 - [x] Você quer deletar a branch da nova funcionalidade, depois de aplicar em seu projeto.
-`git branch -D nome_da_branch`
+- `git branch -D nome_da_branch`;
 
 ---
  
 - [x] Você quer colocar seu projeto na nuvem
 Ir no seu github e criar um repositório, por boas práticas coloque o nome do repositório com o mesmo nome da pasta do projeto. Mas pode-se utilizar outro nome se quiser.
-`git remote add origin https://github.com/nome_conta/nome_repositório.git`
+- `git remote add origin https://github.com/nome_conta/nome_repositório.git`;
  
-`git remote -v` para ver os repositórios remotos do usuário.
+- `git remote -v` para ver os repositórios remotos do usuário.;
  
-`git push -u origin master` vai empurrar o repositório local para o repositório online. Como o push vai ser feito pela primeira vez é necessário criar a branch master no repositório online (-u origin master).
+- `git push -u origin master` vai empurrar o repositório local para o repositório online. Como o push vai ser feito pela primeira vez é necessário criar a branch master no repositório online (-u origin master).;
  
-Vai se pedido o nome de usuário do git e a senha. Caso o github já esteja configurado com uma chave privada, o envio vai ser feito direto.
+- Vai se pedido o nome de usuário do git e a senha. Caso o github já esteja configurado com uma chave privada, o envio vai ser feito direto.;
  
-Na próxima vez que for fazer um push, só precisa digitar:
-`git push`
-pois a branch master já foi criada no repositório online
+- Na próxima vez que for fazer um push, só precisa digitar `git push`, pois a branch master já foi criada no repositório online;
  
-para não ter que ficar sempre digitando o nome de usuário e senha toda vez que fizer um push, fazer:
-`git config credential.helper store`
- 
-com isso não é mais preciso colocar nome de usuário e senha, pois será usado as informações de usuário e senha da última vez.
+- Para não ter que ficar sempre digitando o nome de usuário e senha toda vez que fizer um push, fazer `git config credential.helper store` com isso não é mais preciso colocar nome de usuário e senha, pois será usado as informações de usuário e senha da última vez;
 
 ---
  
 - [x] Você vai pegar um projeto já iniciado, para trabalhar com o time
-`git clone https://github.com/nome_usuario/nome_projeto.git`
+- `git clone https://github.com/nome_usuario/nome_projeto.git`;
  
-Entrar na pasta
-`cd nome_projeto`
+- Entrar na pasta `cd nome_projeto`;
  
-Agora será criado um cenário de conflito
+- Agora será criado um cenário de conflito
  
 - [x] Você precisa resolver um conflito.
  
-Primeiro criar uma branch nova e mudar para essa branch
-`git checkout -b teste`
-Esse é um comando curto que vai criar uma nova branch e já vai mudar para essa branch
+- Primeiro criar uma branch nova e mudar para essa branch `git checkout -b teste`. Esse é um comando curto que vai criar uma nova branch e já vai mudar para essa branch;
+- Representa a mesma sequência de comandos; 
+- `git branch nome_da_branch`;
+- `git checkout nome_da_branch`;   
  
-Representa a mesma sequência de comandos
-`git branch nome_da_branch`
-`git checkout nome_da_branch`   
+- Ir em um arquivo dessa pasta e modificá-lo, ex: apagar uma linha, depois fazer `git status` para confirmar a alteração;
  
-Ir em um arquivo dessa pasta e modificá-lo, ex: apagar uma linha
-depois fazer 
-`git status`
-para confirmar a alteração
+- Fazer o commit da alteração, pode-se utilizar um comando curto;
+- `git commit -am "mensagem para registrar o que foi feito"`;
  
-Fazer o commit da alteração, pode-se utilizar um comando curto
-`git commit -am "mensagem para registrar o que foi feito"`
+- Representa a mesma sequência de comandos;
+- `git add nome_do_arquivo`;
+- `git commit -m "Uma mensagem para registar o que foi feito"`;
  
-representa a mesma sequência de comandos
-`git add nome_do_arquivo`
-`git commit -m "Uma mensagem para registar o que foi feito"`
+- Voltar para a branch master;
+- `git checkout master`;
  
-Voltar para a branch master
-`git checkout master`
+- Ir na mesma linha que na branch teste foi apagada e inserir algum texto nela, ex: arquivo package.json;
+- `git add .`;
+- `git commit -m "mensagem para registrar o que foi feito"`;
  
-Ir na mesma linha que na branch teste foi apagada e inserir algum texto nela
-arquivo package.json
+- Unir as duas linhas do tempo, estando na branch master;
+- `git merge teste`;
  
-`git add .`
-`git commit -m "mensagem para registrar o que foi feito"`
- 
-unir as duas linhas do tempo, estando na branch master
-`git merge teste`
- 
-Vai aparecer a mensagem de conflito
+- Vai aparecer a mensagem de conflito;
+```
 "Auto-merging package.json
 CONFLICT (content): Merge conflict in package.json
 Automatic merge failed; fix conflicts and then commit the result."
- 
+```
+
 Usando o visual studio, ele vai mostrar algumas opções pelo programa, que são: aceitar a alteração da branch master, aceitar a alteração da branch teste, aceitar a alteração das duas branchs e comparar as mudanças. 
  
 Será escolhido a primeira opção "aceitar a alteração da branch master"
