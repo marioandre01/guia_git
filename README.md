@@ -18,9 +18,9 @@ O git precisa saber quem é o usuário antes de registrar os commits.
 ## Cenários de uso
  
 - [x] Você deseja criar pontos na história da produção do seu projeto 
-- Inicia a linha do tempo: `git init`;
-- Adiciona mudanças para irem para a linha do tempo: `git add nome_do_arquivo`;
-- Adiciona um ponto na linha do tempo: `git commit -m "Uma mensagem para registar o que foi feito"`;
+- `git init` //Inicia a linha do tempo;
+- `git add nome_do_arquivo` // Adiciona mudanças para irem para a linha do tempo;
+- `git commit -m "Uma mensagem para registar o que foi feito"` // Adiciona um ponto na linha do tempo;
  
 - [x] Você deseja verificar mudanças feitas no seu projeto
 - Informa o estado das alterações do nosso projeto: `git status`;
