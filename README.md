@@ -52,7 +52,7 @@ O git precisa saber quem é o usuário antes de registrar os commits.
 ---
  
 - [x] Você quer colocar seu projeto na nuvem
-Ir no seu github e criar um repositório, por boas práticas coloque o nome do repositório com o mesmo nome da pasta do projeto. Mas pode-se utilizar outro nome se quiser.
+- Ir no seu github e criar um repositório, por boas práticas coloque o nome do repositório com o mesmo nome da pasta do projeto. Mas pode-se utilizar outro nome se quiser;
 - `git remote add origin https://github.com/nome_conta/nome_repositório.git`;
  
 - `git remote -v` para ver os repositórios remotos do usuário.;
