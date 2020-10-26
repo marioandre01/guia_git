@@ -6,7 +6,7 @@ Guia prático para iniciantes.
  
 https://git-scm.com/download
  
-configurações iniciais
+Configurações iniciais
  
 ``` 
 git config --global user.name "Seu_Nome_Aqui"
@@ -18,7 +18,7 @@ O git precisa saber quem é o usuário antes de registrar os commits.
 ## Cenários de uso
  
 - [x] Você deseja criar pontos na história da produção do seu projeto 
-- `git init` //Inicia a linha do tempo;
+- `git init` // Inicia a linha do tempo;
 - `git add nome_do_arquivo` // Adiciona mudanças para irem para a linha do tempo;
 - `git commit -m "Uma mensagem para registar o que foi feito"` // Adiciona um ponto na linha do tempo;
  
@@ -26,16 +26,9 @@ O git precisa saber quem é o usuário antes de registrar os commits.
 - Informa o estado das alterações do nosso projeto: `git status`;
 - Visualiza os pontos na linha do tempo/commit: `git log`;
  
-Olhar os pontos na história:
-`git show numero_do_commit`
+ - `git show numero_do_commit` // Olhar os pontos na história. Para ver o número do commit utilizar `git log`. Vai mostrar o histórico de todos os commits feitos, cada commit tem um número o referenciando;
  
-Para ver o número do commit utilizar
-`git log`
- 
-Vai mostrar o histórico de todos os commits feitos, cada commit tem um número o referenciando.
- 
-Ver o último ponto na história - último commit feito
-`git show`
+ - `git show` // Ver o último ponto na história - último commit feito;
  
 - [x] Você começa uma nova funcionalidade no seu projeto, sem estragar o que já foi feito.
 `git branch nome_da_branch`
