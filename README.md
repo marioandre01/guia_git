@@ -8,21 +8,23 @@ https://git-scm.com/download
  
 configurações iniciais
  
+``` 
 git config --global user.name "Seu_Nome_Aqui"
 git config --global user.email "seuemail@exemplo.com"
+``` 
  
 O git precisa saber quem é o usuário antes de registrar os commits.
  
-# Cenários de uso
+## Cenários de uso
  
 - [x] Você deseja criar pontos na história da produção do seu projeto 
-`git init`
-`git add nome_do_arquivo`
-`git commit -m "Uma mensagem para registar o que foi feito"`
+- Inicia a linha do tempo: `git init`;
+- Adiciona mudanças para irem para a linha do tempo: `git add nome_do_arquivo`;
+- Adiciona um ponto na linha do tempo: `git commit -m "Uma mensagem para registar o que foi feito"`;
  
 - [x] Você deseja verificar mudanças feitas no seu projeto
-`git status`
-`git log`
+- Informa o estado das alterações do nosso projeto: `git status`;
+- Visualiza os pontos na linha do tempo/commit: `git log`;
  
 Olhar os pontos na história:
 `git show numero_do_commit`
@@ -215,5 +217,5 @@ Desse modo para recuperar um arquivo deletado seja o tempo que for, é só usar 
 * `git clone` // clonar um projeto / repositório
 * `git pull`  // puxa do repositório remoto
  
-Referência: [Como usar Git e Github na prática: Guia para iniciantes | Mayk Brito - Rocketseat] (https://www.youtube.com/watch?v=2alg7MQ6_sI)
+Referência: [Como usar Git e Github na prática: Guia para iniciantes | Mayk Brito - Rocketseat](https://www.youtube.com/watch?v=2alg7MQ6_sI)
 
