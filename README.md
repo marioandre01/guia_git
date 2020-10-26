@@ -23,8 +23,8 @@ O git precisa saber quem é o usuário antes de registrar os commits.
 - `git commit -m "Uma mensagem para registar o que foi feito"` // Adiciona um ponto na linha do tempo;
  
 - [x] Você deseja verificar mudanças feitas no seu projeto
-- Informa o estado das alterações do nosso projeto: `git status`;
-- Visualiza os pontos na linha do tempo/commit: `git log`;
+- `git status` // Informa o estado das alterações do nosso projeto;
+- `git log` // Visualiza os pontos na linha do tempo/commit;
  
  - `git show numero_do_commit` // Olhar os pontos na história. Para ver o número do commit utilizar `git log`. Vai mostrar o histórico de todos os commits feitos, cada commit tem um número o referenciando;
  
