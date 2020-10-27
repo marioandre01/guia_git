@@ -75,25 +75,25 @@ O git precisa saber quem é o usuário antes de registrar os commits.
 git branch nome_da_branch`
 git checkout nome_da_branch`   
 ```
-- Ir em um arquivo dessa pasta e modificá-lo, por ex: apagar uma linha
+- Ir em um arquivo dessa pasta e modificá-lo, por ex: apagar uma linha;
 - Depois digitar `git status` para confirmar a alteração;
-- Fazer o commit da alteração, pode-se utilizar um comando curto;
+- Fazer o commit da alteração, pode-se utilizar um comando curto:
 - `git commit -am "mensagem para registrar o que foi feito"`;
-- Representa a mesma sequência de comandos;
+- Representa a mesma sequência de comandos:
 ```
 git add nome_do_arquivo`
 git commit -m "Uma mensagem para registar o que foi feito"`
 ```
 - Voltar para a branch master;
-- `git checkout master`;
+- `git checkout master`
 - Ir na mesma linha que foi apagada na branch nome_da_branch e inserir algum texto nela;
 - Depois adicionar essa alteração na linha do tempo;
-- `git add .`;
-- `git commit -m "mensagem para registrar o que foi feito"`;
+- `git add .`
+- `git commit -m "mensagem para registrar o que foi feito"`
 - Misturar as duas linhas do tempo, estando na branch master;
-- `git checkout master`;
-- `git merge nome_da_branch`;
-- Vai aparecer a mensagem de conflito, abaixo um exemplo da mensagem;
+- `git checkout master`
+- `git merge nome_da_branch`
+- Vai aparecer a mensagem de conflito. Abaixo um exemplo da mensagem:
 ```
 "Auto-merging package.json
 CONFLICT (content): Merge conflict in package.json
@@ -104,8 +104,8 @@ Automatic merge failed; fix conflicts and then commit the result."
 - Salvar a alteração;
 - Fazendo um `git status` vai mostrar que não ocorreu a merge, pois houve um conflito;
 - Com a escolha da opção "aceitar a alteração da branch master" e salvo a alteração, digitar:
-`git commit -am "conflict resolved"`;
-- Confirmar se o conflito foi resolvido com;
+`git commit -am "conflict resolved"`
+- Confirmar se o conflito foi resolvido com:
 `git status`
 `git log`
  
@@ -122,7 +122,7 @@ Automatic merge failed; fix conflicts and then commit the result."
  
 - [x] Você precisa voltar um arquivo para um determinado momento da linha do tempo
 - Deseja-se voltar uma alteração que foi feita em algum arquivo;
-- Que momento é esse?;
+- Que momento é esse?
 - Verificar isso com `git log`;
 - Verifica-se qual momento se quer voltar, escolhido o momento anotar o número do commit escolhido;
 - Então digitar:
@@ -138,17 +138,17 @@ git commit -am "mensagem para registrar o que foi feito"`
  
 - [x] Você precisa recuperar algo deletado. 
 - Deletar um arquivo do projeto;
-- Verificar que o arquivo foi deletado com `git status` , o git status vai mostrar que o arquivo foi deletado, mas ele não foi adicionado em um ponto na história. Como ele não foi adicionado em um ponto na história, para recupera-lo fazer:
-- `git checkout -- nome_do_arquivo_excluído`;
+- Verificar que o arquivo foi deletado com `git status`, o git status vai mostrar que o arquivo foi deletado, mas ele não foi adicionado em um ponto na história. Como ele não foi adicionado em um ponto na história, para recupera-lo fazer:
+- `git checkout -- nome_do_arquivo_excluído`
 - Como depois da palavra checkout não foi passado um número de commit (um ponto na história), será usado o ponto na história atual (último commit feito);
 - Vamos supor que o arquivo foi deletado e foi adicionado em um ponto da história;
 - Deletar o arquivo;
 - Então fazer:
-- `git commit -am "delete nome_do_arquivo_excluído"`;
+- `git commit -am "delete nome_do_arquivo_excluído"`
 - Se tentar fazer: `git checkout -- nome_do_arquivo_excluído` , não vai funcionar, vai mostrar um erro, pois no último commit feito o arquivo não existe;
 - Para consegui recuperar o arquivo deve-se utilizar um ponto na história (numero do commit) anterior onde o arquivo existia;
 - Para isso fazer:
-- `git checkout numero_do_commit -- nome_do_arquivo_excluído`;
+- `git checkout numero_do_commit -- nome_do_arquivo_excluído`
 - Desse modo para recuperar um arquivo deletado seja o tempo que for, é só usar um tempo na história que ele estava criado;
 
 ## Resumo dos comandos
