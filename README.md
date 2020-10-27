@@ -9,7 +9,7 @@ https://git-scm.com/downloads
 Configurações iniciais:
  
 ``` 
-git config --global user.name "Seu_Nome_Aqui"
+git config --global user.name "seu_nome_aqui"
 git config --global user.email "seuemail@exemplo.com"
 ``` 
  
