@@ -114,9 +114,9 @@ Automatic merge failed; fix conflicts and then commit the result."
 - [x] Antes de enviar o projeto, precisamos atualizar o projeto local.
 - Ir no repositório remoto e fazer alguma alteração em algum arquivo, por ex: apagar algumas linhas;
 - Antes de fazer um push para o repositório remoto digitar:
-`git pull`, esse comando vai puxar atualizações que ocorreram no projeto na nuvem (repositório remoto);
+- `git pull`, esse comando vai puxar atualizações que ocorreram no projeto na nuvem (repositório remoto);
 - Imagina que você está trabalhando com um time, algum colega seu alterou na máquina dele algum arquivo e enviou essa alteração (git push) para o repositório remoto. Quando ele enviou essa alteração para o repositório remoto, você precisa atualizar essas informações no seu projeto local, antes de enviar as suas alterações. Porque senão vai gerar conflitos, pois não sabe-se o que mudou ou deixou de mudar lá;
-- Feito o "git pull" pode-se fazer o `git push`;
+- Feito o `git pull` pode-se fazer o `git push`;
 
 ---
  
@@ -126,28 +126,29 @@ Automatic merge failed; fix conflicts and then commit the result."
 - Verificar isso com `git log`;
 - Verifica-se qual momento se quer voltar, escolhido o momento anotar o número do commit escolhido;
 - Então digitar:
-`git checkout numero_do_commit -- nome_do_arquivo_a_voltar_a_alteração`;
-`git commit -am "mensagem para registrar o que foi feito"`;
-`git pull` , para ver se não teve nenhuma alteração no repositório remoto;
+```
+git checkout numero_do_commit -- nome_do_arquivo_a_voltar_a_alteração`
+git commit -am "mensagem para registrar o que foi feito"`
+```
+- `git pull` , para ver se não teve nenhuma alteração no repositório remoto;
 - Então digitar:
-`git push`;
+- `git push`
  
  ---
  
 - [x] Você precisa recuperar algo deletado. 
 - Deletar um arquivo do projeto;
-- Verificar que o arquivo foi deletado com; 
-`git status` , o git status vai mostrar que o arquivo foi deletado, mas ele não foi adicionado em um ponto na história. Como ele não foi adicionado em um ponto na história, para recupera-lo fazer:
-`git checkout -- nome_do_arquivo_excluído`;
+- Verificar que o arquivo foi deletado com `git status` , o git status vai mostrar que o arquivo foi deletado, mas ele não foi adicionado em um ponto na história. Como ele não foi adicionado em um ponto na história, para recupera-lo fazer:
+- `git checkout -- nome_do_arquivo_excluído`;
 - Como depois da palavra checkout não foi passado um número de commit (um ponto na história), será usado o ponto na história atual (último commit feito);
 - Vamos supor que o arquivo foi deletado e foi adicionado em um ponto da história;
-- Deletar o arquivo
-- Fazer:
-`git commit -am "delete nome_do_arquivo_excluído"`;
+- Deletar o arquivo;
+- Então fazer:
+- `git commit -am "delete nome_do_arquivo_excluído"`;
 - Se tentar fazer: `git checkout -- nome_do_arquivo_excluído` , não vai funcionar, vai mostrar um erro, pois no último commit feito o arquivo não existe;
 - Para consegui recuperar o arquivo deve-se utilizar um ponto na história (numero do commit) anterior onde o arquivo existia;
-- Para isso fazer;
-`git checkout numero_do_commit -- nome_do_arquivo_excluído`;
+- Para isso fazer:
+- `git checkout numero_do_commit -- nome_do_arquivo_excluído`;
 - Desse modo para recuperar um arquivo deletado seja o tempo que for, é só usar um tempo na história que ele estava criado;
 
 ## Resumo dos comandos
