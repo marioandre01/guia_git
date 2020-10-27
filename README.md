@@ -107,8 +107,8 @@ Automatic merge failed; fix conflicts and then commit the result."
 - Com a escolha da opção "aceitar a alteração da branch master" e salvo a alteração, digitar:
 `git commit -am "conflict resolved"`
 - Confirmar se o conflito foi resolvido com:
-`git status`
-`git log`
+- `git status`
+- `git log`
  
  ---
  
